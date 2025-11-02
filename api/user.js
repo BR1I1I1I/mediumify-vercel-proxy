@@ -1,8 +1,3 @@
-import express from "express";
-const app = express();
-
-app.get("/api/user", (req, res) => {
-  res.json({ message: "User endpoint working!" });
-});
-
-export default app;
+export default function handler(req, res) {
+  return res.status(200).json({ message: "User endpoint working!" });
+}
